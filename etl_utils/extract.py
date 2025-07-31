@@ -137,7 +137,7 @@ def extract_data():
     channel_stats_df: DataFrame with channel statistics
     
     """
-    # Load environment variables from .env file
+    
     
     api_key= os.getenv('API_KEY')
     api_service_name = 'youtube'
