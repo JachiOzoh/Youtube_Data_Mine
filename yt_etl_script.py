@@ -15,6 +15,9 @@ def main():
     validate_data(video_df, channel_stats_df)
     load_data(video_df, channel_stats_df)
     print("ETL process completed successfully.")
+    video_df.head().to_csv('video_data_exc.csv', index=False)
+    channel_stats_df.head().to_csv('channel_data_exc.csv', index=False)
 
 if __name__ == "__main__":
     main()
+
