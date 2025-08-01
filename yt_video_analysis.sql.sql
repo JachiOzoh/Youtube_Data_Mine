@@ -9,7 +9,7 @@ Which video has the highest engagement rate?
 */
 SELECT 
   video_id,channel_title,
-  ((like_count + comment_count)/view_count)*100 AS engagement_rate
+  ((like_count + comment_count) * 1.0 / NULLIF(view_count, 0)) * 100 AS engagement_rate
 FROM videos
 ORDER BY engagement_rate DESC;
 
@@ -62,7 +62,6 @@ WITH video_type_table AS (SELECT video_id,
     ELSE 'Other'
   END AS content_type
 FROM videos)
---ORDER BY view_count DESC;
 
 SELECT vt.content_type AS content_type, AVG(v.view_count) AS average_views
 FROM videos v
@@ -71,3 +70,13 @@ ON v.video_id=vt.video_id
 WHERE vt.content_type NOT LIKE 'Other'
 GROUP BY vt.content_type
 ORDER BY average_views DESC
+
+
+
+SELECT channel_name, CAST(total_videos AS varchar(max)) AS total_videos,
+AVG(((like_count + comment_count) * 1.0 / NULLIF(view_count, 0)) *100) AS avg_engagement_rate
+FROM channels
+INNER JOIN videos
+ON channel_name = channel_title
+GROUP BY channel_name, CAST(total_videos AS varchar(max))
+ORDER BY CAST(total_videos AS varchar(max)) DESC

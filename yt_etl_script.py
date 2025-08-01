@@ -4,7 +4,6 @@ from etl_utils.transform import transform_data
 from etl_utils.validate import validate_data
 from etl_utils.load import load_data
 
-
 def main():
     """
     Main function to run the ETL process.

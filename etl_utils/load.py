@@ -26,10 +26,10 @@ def load_data(video_df, channel_stats_df):
     
     video_df.to_sql('videos', con=engine, if_exists='replace',
                     dtype={'video_id': sa.types.VARCHAR(length=40), 
-                       'channel_title': sa.types.VARCHAR(),
+                       'channel_title': sa.types.VARCHAR(length=40),
                        'title': sa.types.VARCHAR(length=200),
                        'description': sa.types.TEXT(),
-                       'tags': sa.types.VARCHAR(),
+                       'tags': sa.types.VARCHAR(length=40),
                        'like_count': sa.types.BIGINT(),
                        'favourite_count': sa.types.BIGINT(),
                        'comment_count': sa.types.BIGINT(),
@@ -42,9 +42,9 @@ def load_data(video_df, channel_stats_df):
     
     channel_stats_df.to_sql('channels', con=engine, if_exists='replace', 
                     dtype={'channel_name': sa.types.VARCHAR(length=40), 
-                       'subscribers': sa.types.VARCHAR(),
-                       'views': sa.types.VARCHAR(length=200),
-                       'total_videos': sa.types.TEXT(),
-                       'playlist_id': sa.types.VARCHAR()}
+                       'subscribers': sa.types.BIGINT(),
+                       'views': sa.types.BIGINT(),
+                       'total_videos': sa.types.BIGINT(),
+                       'playlist_id': sa.types.VARCHAR(length=40)}
                            )
     return 1
