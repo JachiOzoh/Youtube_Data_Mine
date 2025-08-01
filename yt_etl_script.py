@@ -4,14 +4,13 @@ from etl_utils.transform import transform_data
 from etl_utils.validate import validate_data
 from etl_utils.load import load_data
 
-load_dotenv()
-
 
 def main():
     """
     Main function to run the ETL process.
     It extracts data from YouTube API, transforms it, and loads it into a SQL Server database.
     """
+    load_dotenv() # Load environment variables from .env file
     video_df, channel_stats_df = extract_data()
     video_df, channel_stats_df = transform_data(video_df, channel_stats_df)
     validate_data(video_df, channel_stats_df)
