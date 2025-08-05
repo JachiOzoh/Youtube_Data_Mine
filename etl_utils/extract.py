@@ -157,6 +157,12 @@ def extract_data():
                    'UCmLGJ3VYBcfRaWbP6JLJcpA', # Seattle Data Guy
                    'UCFp1vaKzpfvoGai0vE5VJ0w', # Guy in a Cube
                    'UCh9nVJoWXmFb7sLApWGcLPQ', # Codebasics
+                   'UCuyfszBAd3gUt9vAbC1dfqA', # Avery Smith
+                   'UCWegChjG2YNdVMobQEMxolQ', # Jash Radia
+                   'UCRsjR0vJxD0ufV90B9WX8lA', # Kedisha Bryan
+                   'UCteRPiisgIoHtMgqHegpWAQ', # Sundas Kalid
+                   'UC_tgXLfHYVXFIe-8c4cRUNQ', # Matt Mike
+                   'UC3iyLcDyYxk2nN7M5DsYaYQ', # Daniel Tech And Data                    
                 ]
     
     youtube = googleapiclient.discovery.build(
