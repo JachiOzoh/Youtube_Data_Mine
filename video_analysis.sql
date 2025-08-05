@@ -3,6 +3,7 @@
  Author: Jachimike F. Ozoh
  Last updated: 2025-08-1
  -----------------------------*/
+
 /*
 Engagement Rate
 Which video has the highest engagement rate?
@@ -53,7 +54,8 @@ SELECT
 FROM videos
 GROUP BY DATEPART(hour, publish_time)
 ORDER BY avg_views DESC;
---Most succesful hours to publish: 19, 17, 18, 20. A clear trend is that times later in the day between 5pm and 8pm are the best times to publish.
+--Most succesful hours to publish: 19, 17, 18, 20. A clear trend is that times later in the day (the exception being 4AM) between 5pm and 8pm are the best times to publish.
+
 SELECT 
   publish_day_name AS publish_day,
   AVG(view_count) AS avg_views
@@ -105,13 +107,13 @@ video_total AS (
 )
 
 SELECT 
-    (vt.pbi_count / vt_total.video_total)* 100 AS avg_pbi,
-    (vt.python_count / vt_total.video_total)* 100 AS avg_python,
-    (vt.sql_count / vt_total.video_total)* 100 AS avg_sql,
-    (vt.tableau_count / vt_total.video_total)* 100 AS avg_tableau
+    (vt.pbi_count / vt_total.video_total)* 100 AS pct_pbi,
+    (vt.python_count / vt_total.video_total)* 100 AS pct_python,
+    (vt.sql_count / vt_total.video_total)* 100 AS pct_sql,
+    (vt.tableau_count / vt_total.video_total)* 100 AS pct_tableau
 FROM video_type_counts_table vt
 CROSS JOIN video_total vt_total
--- About 16% of topics are python related 
+-- About 14% of topics are python related 
 /*
 Channels With The Highest Engagement
 Which channel get the highest engagement on average?
@@ -126,3 +128,6 @@ GROUP BY channel_name, total_videos
 ORDER BY avg_engagement_rate  DESC
 
 -- Mo Chen with a 4.9556291647547 average engagement rate
+
+select *
+from videos;

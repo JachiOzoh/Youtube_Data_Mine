@@ -1,10 +1,10 @@
-from great_expectations.dataset import PandasDataset
+import great_expectations as ge
 
 def validate_data(video_df, channel_stats_df):
-    class VideoDataSet(PandasDataset):
+    class VideoDataSet(ge.dataset.PandasDataset):
         pass
 
-    class ChannelDataSet(PandasDataset):
+    class ChannelDataSet(ge.dataset.PandasDataset):
         pass
     """
     Run Great Expectations checks on both video and channel dataframes.
