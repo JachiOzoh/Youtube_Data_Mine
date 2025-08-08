@@ -8,9 +8,9 @@ A modular ETL pipeline that:
 2. **Transforms** and cleans the data for analysis.
 3. **Validates** the transformed data.
 4. **Loads** the data into a SQL Server database.
-5. Includes sample SQL analysis scripts and a Power BI report for visualization.
+5. Includes SQL analysis script and a Power BI report for visualization.
 
-This pipeline is designed to help content creators, data analysts, and researchers automate the collection and analysis of YouTube channel metrics.
+This pipeline is designed to help a startup in the data niche find the best data science and data analytics youtube channels to sponsor or collaborate with.
 
 ---
 
@@ -52,14 +52,14 @@ This pipeline is designed to help content creators, data analysts, and researche
 
 1. **Clone the repository**:
 
-   ```bash
+   ```power shell
    git clone <your-repo-url>.git
    cd Youtube_Data_Pipeline
    ```
 
 2. **Create and activate a virtual environment**:
 
-   ```bash
+   ```power shell
    python -m venv venv
    source venv/bin/activate    # Linux/macOS
    venv\Scripts\activate     # Windows
@@ -67,7 +67,7 @@ This pipeline is designed to help content creators, data analysts, and researche
 
 3. **Install dependencies**:
 
-   ```bash
+   ```power shell
    pip install --upgrade pip
    pip install -r reqirements.txt
    ```
@@ -117,7 +117,7 @@ This pipeline is designed to help content creators, data analysts, and researche
 
 Run the full ETL process:
 
-```bash
+```power shell
 python etl_script.py
 ```
 
@@ -135,7 +135,7 @@ The script will:
 
 Use the provided SQL script to analyze your loaded data:
 
-```bash
+```power shell
 sqlcmd -S <SERVER_NAME> -d <DATABASE_NAME> -i "sql scripts/video_analysis.sql"
 ```
 
@@ -170,15 +170,8 @@ Please ensure code quality and add tests where applicable.
 
 ---
 
-## License
-
-This project is licensed under the MIT License. See `LICENSE` for details.
-
----
-
 ## Contact
 
-- **Author**: Jachimike Ozoh
-- **Email**: [your.email@example.com](mailto\:your.email@example.com)
-- **GitHub**: [github.com/yourusername](https://github.com/yourusername)
-
+- **Author**: Jachimike Francis Ozoh
+- **Email**: [jachimike008@gmail.com](mailto\:jachimike008@gmail.com)
+- **GitHub**: [github.com/JachiOzoh](https://github.com/JachiOzoh)
