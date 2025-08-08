@@ -71,6 +71,7 @@ This pipeline is designed to help a startup in the data niche find the best data
    pip install --upgrade pip
    pip install -r reqirements.txt
    ```
+4. **Create .env file in the root directory to store api keys**
 
 ---
 
@@ -159,14 +160,13 @@ Open `Video Analysis.pbix` in Power BI Desktop to explore pre-built dashboards:
 
 ## Contributing
 
-Contributions are welcome! Please:
+Contributions are welcome. Please:
 
 1. Fork the repo.
 2. Create a new branch: `git checkout -b feature/my-feature`.
 3. Commit your changes.
 4. Create a pull request.
 
-Please ensure code quality and add tests where applicable.
 
 ---
 
