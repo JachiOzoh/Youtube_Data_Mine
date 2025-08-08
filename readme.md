@@ -151,8 +151,8 @@ This script performs sample queries such as:
 ## Power BI Report
 
 Open `Video Analysis.pbix` in Power BI Desktop to explore pre-built dashboards:
-
 - **Overview**: Summary metrics and trends.
+- **Overview**: [Live Dashboard (Novypro)](https://app.powerbi.com/view?r=eyJrIjoiZGQxNDA4YTAtZDJkMy00YmY1LWEzZmItYzJjNTM1ZmUxOTE4IiwidCI6ImIxMTlmMWJhLWE3Y2YtNDVhNi04MWNiLTMwOTNmMmVmYTM5OCJ9)
 - **Video Performance**: Visuals for views, likes, comments over time.
 - **Channel Insights**: Subscriber and upload rate analyses.
 
