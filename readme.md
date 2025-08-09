@@ -53,7 +53,7 @@ This pipeline is designed to help a startup in the data niche find the best data
 1. **Clone the repository**:
 
    ```power shell
-   git clone <your-repo-url>.git
+   git clone https://github.com/JachiOzoh/Youtube_Data_Pipeline.git
    cd Youtube_Data_Pipeline
    ```
 
@@ -95,7 +95,7 @@ This pipeline is designed to help a startup in the data niche find the best data
 
 ## Configuration
 
-1. **Populate **``:
+1. **Create**:
 
    ```ini
    API_KEY=<YOUR_YOUTUBE_API_KEY>
@@ -106,8 +106,8 @@ This pipeline is designed to help a startup in the data niche find the best data
    ```python
    params = urllib.parse.quote_plus(
        'DRIVER=ODBC Driver 17 for SQL Server;'
-       'SERVER=<YOUR_SERVER_NAME>;<br>'
-       'DATABASE=<YOUR_DATABASE_NAME>;<br>'
+       'SERVER=<YOUR_SERVER_NAME>;'
+       'DATABASE=<YOUR_DATABASE_NAME>;'
        'Trusted_Connection=yes'
    )
    ```
@@ -151,8 +151,8 @@ This script performs sample queries such as:
 ## Power BI Report
 
 Open `Video Analysis.pbix` in Power BI Desktop to explore pre-built dashboards:
-- **Overview**: Summary metrics and trends.
-- **Overview**: [Live Dashboard (Novypro)](https://app.powerbi.com/view?r=eyJrIjoiZGQxNDA4YTAtZDJkMy00YmY1LWEzZmItYzJjNTM1ZmUxOTE4IiwidCI6ImIxMTlmMWJhLWE3Y2YtNDVhNi04MWNiLTMwOTNmMmVmYTM5OCJ9)
+- **Interactive Dashboard Link**: [Live Dashboard (Novypro)](https://project.novypro.com/bR0vOn)
+- **Overview**: Summary metrics and trends. 
 - **Video Performance**: Visuals for views, likes, comments over time.
 - **Channel Insights**: Subscriber and upload rate analyses.
 
