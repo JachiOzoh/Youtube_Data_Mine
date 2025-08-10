@@ -32,7 +32,7 @@ This pipeline is designed to help a startup in the data niche find the best data
 
 ## Features
 
-- **Automated ETL**: Pulls data from the YouTube Data API and loads it into your database.
+- **ETL**: Pulls data from the YouTube Data API and loads it into your database.
 - **Modular Design**: Separate modules for extraction, transformation, validation, and loading.
 - **Validation Checks**: Ensures data quality before insertion.
 - **SQL & BI**: Sample SQL scripts and a Power BI (.pbix) file for further analysis and visualization.
